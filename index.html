@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sugar Cafe — Sweet Moments, Served Fresh</title>
+
+    <meta
+      name="description"
+      content="Sugar Cafe — a cozy cafe serving handcrafted shakes, waffles, food, and sweet moments." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================================================
+       NAVIGATION
+       This controls the top navigation and cart button.
+       ========================================================= -->
+
+    <header class="navbar" id="navbar">
+      <a href="#home" class="logo">
+        <span class="logo-mark">S</span>
+
+        <span>
+          <strong>Sugar</strong>
+          <small>Cafe</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#location">Location</a>
+      </nav>
+
+      <button class="cart-button" id="openCartBtn">
+        <span>Order</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </header>
+
+    <!-- =========================================================
+       HERO / CAFE INTRODUCTION
+       The first thing customers see.
+       ========================================================= -->
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">WELCOME TO SUGAR CAFE</p>
+
+          <h1>
+            Sweet moments,
+            <em>served fresh.</em>
+          </h1>
+
+          <p class="hero-description">
+            A cozy little place for good food, cold shakes, golden waffles, and
+            the kind of moments worth staying for.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#menu" class="primary-button"> Explore Menu </a>
+
+            <a href="#story" class="secondary-button"> Our Story </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85"
+              alt="Cozy cafe interior" />
+
+            <div class="hero-badge">
+              <span>✦</span>
+              Made with love
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         QUICK INTRO STRIP
+         ========================================================= -->
+
+      <section class="intro-strip">
+        <div>
+          <span class="strip-icon">☕</span>
+          <div>
+            <strong>Freshly Made</strong>
+            <p>Prepared when you order.</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="strip-icon">♡</span>
+          <div>
+            <strong>Made with Care</strong>
+            <p>Every order gets our attention.</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="strip-icon">✦</span>
+          <div>
+            <strong>Good Vibes</strong>
+            <p>Come hungry. Leave happy.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         MENU
+         Categories are controlled by script.js
+         ========================================================= -->
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OUR MENU</p>
+
+            <h2>
+              Something sweet.
+              <br />
+              Something <em>good.</em>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Pick a category and discover what's waiting at Sugar Cafe.
+          </p>
+        </div>
+
+        <!-- MENU CATEGORY BUTTONS -->
+
+        <div class="category-tabs">
+          <button class="category-button active" data-category="shakes">
+            🥤 Shakes
+          </button>
+
+          <button class="category-button" data-category="waffles">
+            🧇 Waffles
+          </button>
+
+          <button class="category-button" data-category="food">🍽 Food</button>
+
+          <button class="category-button" data-category="coffee">
+            ☕ Coffee
+          </button>
+
+          <button class="category-button" data-category="desserts">
+            🍰 Desserts
+          </button>
+        </div>
+
+        <!-- MENU ITEMS -->
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- SHAKES -->
+
+          <article class="menu-card" data-category="shakes">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=85"
+                alt="Chocolate shake" />
+
+              <span class="menu-tag">Popular</span>
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Chocolate Dream</h3>
+                <span class="price">₱145</span>
+              </div>
+
+              <p>
+                Rich chocolate shake topped with whipped cream and chocolate
+                drizzle.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Chocolate Dream"
+                data-price="145">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="shakes">
+            <div class="menu-image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR53Q8--n0sBS1dsIymphVntbj2MYq5KMGr_tiaa6_eocMX2hjGJRzgPjKS&s=10"
+                alt="Strawberry shake" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Strawberry Bliss</h3>
+                <span class="price">₱150</span>
+              </div>
+
+              <p>
+                Creamy strawberry shake with real strawberry flavor and a sweet
+                finish.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Strawberry Bliss"
+                data-price="150">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="shakes">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=700&q=85"
+                alt="Vanilla shake" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Vanilla Cloud</h3>
+                <span class="price">₱135</span>
+              </div>
+
+              <p>
+                Smooth vanilla shake that's light, creamy, and dangerously easy
+                to finish.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Vanilla Cloud"
+                data-price="135">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- WAFFLES -->
+
+          <article class="menu-card hidden-category" data-category="waffles">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=700&q=85"
+                alt="Belgian waffles" />
+
+              <span class="menu-tag">Best Seller</span>
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Classic Belgian</h3>
+                <span class="price">₱160</span>
+              </div>
+
+              <p>
+                Golden Belgian waffle served with cream, syrup, and fresh fruit.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Classic Belgian"
+                data-price="160">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="waffles">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=700&q=85"
+                alt="Chocolate waffles" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Choco Crunch</h3>
+                <span class="price">₱175</span>
+              </div>
+
+              <p>
+                Crisp waffles with chocolate sauce, chocolate crumbs, and
+                whipped cream.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Choco Crunch"
+                data-price="175">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="waffles">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=700&q=85"
+                alt="Berry waffles" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Berry Garden</h3>
+                <span class="price">₱180</span>
+              </div>
+
+              <p>Fresh berries, cream, syrup, and a warm golden waffle.</p>
+
+              <button
+                class="add-button"
+                data-name="Berry Garden"
+                data-price="180">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- FOOD -->
+
+          <article class="menu-card hidden-category" data-category="food">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=700&q=85"
+                alt="Cafe burger" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Sugar Burger</h3>
+                <span class="price">₱195</span>
+              </div>
+
+              <p>
+                Juicy burger with fresh vegetables, cheese, and house sauce.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Sugar Burger"
+                data-price="195">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="food">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85"
+                alt="Pasta" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Creamy Pasta</h3>
+                <span class="price">₱185</span>
+              </div>
+
+              <p>
+                Creamy pasta tossed with herbs and our comforting house sauce.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Creamy Pasta"
+                data-price="185">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="food">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=85"
+                alt="Cafe sandwich" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Club Sandwich</h3>
+                <span class="price">₱175</span>
+              </div>
+
+              <p>
+                Toasted sandwich layered with chicken, vegetables, cheese, and
+                sauce.
+              </p>
+
+              <button
+                class="add-button"
+                data-name="Club Sandwich"
+                data-price="175">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- COFFEE -->
+
+          <article class="menu-card hidden-category" data-category="coffee">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=85"
+                alt="Coffee" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>House Latte</h3>
+                <span class="price">₱130</span>
+              </div>
+
+              <p>Smooth espresso balanced with creamy steamed milk.</p>
+
+              <button
+                class="add-button"
+                data-name="House Latte"
+                data-price="130">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="coffee">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85"
+                alt="Iced coffee" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Iced Caramel Coffee</h3>
+                <span class="price">₱145</span>
+              </div>
+
+              <p>Chilled coffee with caramel and a creamy finish.</p>
+
+              <button
+                class="add-button"
+                data-name="Iced Caramel Coffee"
+                data-price="145">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- DESSERTS -->
+
+          <article class="menu-card hidden-category" data-category="desserts">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85"
+                alt="Chocolate cake" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Chocolate Slice</h3>
+                <span class="price">₱150</span>
+              </div>
+
+              <p>Rich chocolate cake with a soft, moist center.</p>
+
+              <button
+                class="add-button"
+                data-name="Chocolate Slice"
+                data-price="150">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="menu-card hidden-category" data-category="desserts">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=85"
+                alt="Cupcake" />
+            </div>
+
+            <div class="menu-card-content">
+              <div class="menu-title-row">
+                <h3>Sweet Cupcake</h3>
+                <span class="price">₱95</span>
+              </div>
+
+              <p>Soft vanilla cupcake finished with creamy frosting.</p>
+
+              <button
+                class="add-button"
+                data-name="Sweet Cupcake"
+                data-price="95">
+                Add to Order <span>+</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         OWNER STORY
+         ========================================================= -->
+
+      <section class="story-section" id="story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+            alt="Coffee shop atmosphere" />
+        </div>
+
+        <div class="story-content">
+          <p class="eyebrow">OUR STORY</p>
+
+          <h2>A little cafe with a lot of <em>heart.</em></h2>
+
+          <p>
+            Sugar Cafe started with a simple idea: create a place where people
+            can slow down, grab something delicious, and enjoy the moment.
+          </p>
+
+          <p>
+            From the first cup of coffee in the morning to late-afternoon
+            waffles with friends, everything we serve is made with the same goal
+            — to make your day a little sweeter.
+          </p>
+
+          <div class="owner-signature">
+            <div class="signature-line"></div>
+
+            <div>
+              <strong>The Sugar Cafe Family</strong>
+              <span>Made with love, served with a smile.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         LOCATION
+         Replace the map embed URL with the cafe's actual location.
+         ========================================================= -->
+
+      <section class="location-section" id="location">
+        <div class="section-heading centered">
+          <p class="eyebrow">COME VISIT US</p>
+
+          <h2>
+            Find your way to
+            <em>Sugar Cafe.</em>
+          </h2>
+
+          <p class="section-description">
+            Drop by, grab your favorite drink, and stay for a while.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=NMV+Annex+Building,+Zamora+St,+Dinalupihan,+2110+Bataan&output=embed"
+              loading="lazy"
+              title="Sugar Cafe location map"></iframe>
+          </div>
+
+          <div class="location-info">
+            <span class="location-icon">⌖</span>
+
+            <h3>Sugar Cafe</h3>
+
+            <p>Balanga City, Bataan</p>
+
+            <p class="location-note">
+              Replace this address with the cafe's actual location before
+              launching.
+            </p>
+
+            <a
+              href="https://www.google.com/maps"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="secondary-button">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         SOCIALS
+         ========================================================= -->
+
+      <section class="social-section">
+        <div class="social-inner">
+          <div>
+            <p class="eyebrow">STAY IN TOUCH</p>
+
+            <h2>
+              Follow the
+              <em>Sugar.</em>
+            </h2>
+
+            <p>New menu items, cafe updates, and sweet little moments.</p>
+          </div>
+
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/profile.php?id=61575819083953"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-card">
+              <span>f</span>
+
+              <div>
+                <strong>Facebook</strong>
+                <small>Visit our page →</small>
+              </div>
+            </a>
+
+            <div class="social-card disabled-social">
+              <span>◎</span>
+
+              <div>
+                <strong>Instagram</strong>
+                <small>Coming soon</small>
+              </div>
+            </div>
+
+            <div class="social-card disabled-social">
+              <span>♪</span>
+
+              <div>
+                <strong>TikTok</strong>
+                <small>Coming soon</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ============================================================
+     MENU DETAIL MODAL
+     ============================================================ -->
+
+    <div class="menu-detail-overlay" id="menuDetailOverlay">
+      <div
+        class="menu-detail-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="menuDetailTitle">
+        <button
+          class="menu-detail-close"
+          id="closeMenuDetailBtn"
+          aria-label="Close menu details">
+          ×
+        </button>
+
+        <div class="menu-detail-image">
+          <img id="menuDetailImage" src="" alt="" />
+        </div>
+
+        <div class="menu-detail-content">
+          <span class="menu-detail-category" id="menuDetailCategory">
+            MENU ITEM
+          </span>
+
+          <div class="menu-detail-title-row">
+            <h2 id="menuDetailTitle">Menu Item</h2>
+
+            <strong class="menu-detail-price" id="menuDetailPrice"> ₱0 </strong>
+          </div>
+
+          <p id="menuDetailDescription"></p>
+
+          <button class="menu-detail-add" id="menuDetailAddBtn">
+            Add to Order
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- =========================================================
+       CART DRAWER
+       This appears when the customer clicks Order.
+       ========================================================= -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">YOUR ORDER</p>
+          <h2>Sweet picks.</h2>
+        </div>
+
+        <button class="close-button" id="closeCartBtn" aria-label="Close order">
+          ×
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+          <span>☕</span>
+
+          <h3>Your order is empty</h3>
+
+          <p>Add something delicious from the menu.</p>
+        </div>
+      </div>
+
+      <!-- =======================================================
+     CUSTOMER DETAILS
+     These are required before generating the receipt.
+     ======================================================= -->
+
+      <div class="customer-details">
+        <div class="customer-details-heading">
+          <p class="eyebrow">CUSTOMER DETAILS</p>
+
+          <h3>Where should we send your order?</h3>
+        </div>
+
+        <div class="customer-field">
+          <label for="customerName"> Name </label>
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Your full name"
+            autocomplete="name" />
+        </div>
+
+        <div class="customer-field">
+          <label for="customerNumber"> Phone Number </label>
+
+          <input
+            type="tel"
+            id="customerNumber"
+            placeholder="09XXXXXXXXX"
+            autocomplete="tel" />
+        </div>
+
+        <div class="customer-field">
+          <label for="customerAddress"> Address </label>
+
+          <textarea
+            id="customerAddress"
+            rows="3"
+            placeholder="Your complete address"
+            autocomplete="street-address"></textarea>
+        </div>
+
+        <p class="customer-error" id="customerError">
+          Please complete your name, phone number, and address.
+        </p>
+      </div>
+
+      <!-- =======================================================
+     CART FOOTER
+     ======================================================= -->
+
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total</span>
+
+          <strong id="cartTotal"> ₱0 </strong>
+        </div>
+
+        <button class="receipt-button" id="getReceiptBtn" disabled>
+          Get Receipt
+        </button>
+
+        <p class="cart-note">
+          Your receipt can be copied and sent directly to Sugar Cafe through
+          Messenger.
+        </p>
+      </div>
+    </aside>
+
+    <!-- =========================================================
+       RECEIPT MODAL
+       This is the animated cafe receipt.
+       ========================================================= -->
+
+    <div class="receipt-overlay" id="receiptOverlay">
+      <div class="receipt-modal">
+        <button class="receipt-close" id="closeReceiptBtn">×</button>
+
+        <div class="receipt-paper" id="receiptPaper">
+          <div class="receipt-top">
+            <div class="receipt-logo">S</div>
+
+            <h2>Sugar Cafe</h2>
+
+            <p>Sweet moments, served fresh.</p>
+          </div>
+
+          <div class="receipt-divider">
+            <span>✦</span>
+          </div>
+
+          <div class="receipt-info">
+            <div>
+              <span>ORDER</span>
+              <strong id="receiptOrderNumber"> #SUGAR-0001 </strong>
+            </div>
+
+            <div>
+              <span>DATE</span>
+              <strong id="receiptDate"> — </strong>
+            </div>
+          </div>
+
+          <div class="receipt-items" id="receiptItems">
+            <!-- JS inserts items here -->
+          </div>
+          <!-- =========================================================
+   CUSTOMER INFORMATION
+   Filled automatically from the Order drawer.
+   ========================================================= -->
+
+          <div class="receipt-customer">
+            <div class="receipt-customer-row">
+              <span>NAME</span>
+              <strong id="receiptCustomerName">—</strong>
+            </div>
+
+            <div class="receipt-customer-row">
+              <span>PHONE</span>
+              <strong id="receiptCustomerNumber">—</strong>
+            </div>
+
+            <div class="receipt-customer-row">
+              <span>ADDRESS</span>
+              <strong id="receiptCustomerAddress">—</strong>
+            </div>
+          </div>
+          <div class="receipt-total">
+            <span>TOTAL</span>
+
+            <strong id="receiptTotal"> ₱0 </strong>
+          </div>
+
+          <div class="receipt-message">
+            <p>
+              Thank you for choosing
+              <strong>Sugar Cafe.</strong>
+            </p>
+
+            <span>
+              Please send this receipt to us through Messenger to confirm your
+              order.
+            </span>
+          </div>
+
+          <div class="receipt-bottom">
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+          </div>
+        </div>
+
+        <div class="receipt-actions">
+          <button class="copy-receipt-button" id="copyReceiptBtn">
+            Copy Receipt
+          </button>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61575819083953"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="messenger-button hidden"
+            id="messengerBtn">
+            Open Messenger
+          </a>
+
+          <p id="copyStatus">Copy your receipt before opening Messenger.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+    <footer class="footer">
+      <div class="footer-main">
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-mark">S</span>
+
+          <span>
+            <strong>Sugar</strong>
+            <small>Cafe</small>
+          </span>
+        </a>
+
+        <p>
+          Good food. Good drinks.
+          <br />
+          Sweet moments.
+        </p>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#story">Story</a>
+          <a href="#location">Location</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 Sugar Cafe. All rights reserved. </span>
+
+        <span> Made with ♡ </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
